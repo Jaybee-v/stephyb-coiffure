@@ -1,0 +1,129 @@
+@use 'mixins';
+@use 'shared/reset';
+@use 'cards';
+@import 'shared/_variables';
+@import 'shared/fonts';
+
+.header {
+  background-color: $bgOther;
+  &__navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0 5px 0;
+    &__logo {
+      margin-left: 25px;
+      img {
+        width: 100px;
+      }
+    }
+    &__menu {
+      &__smartphone {
+        margin-right: 30px;
+        background-color: $redO;
+        padding: 20px;
+        border-radius: 50%;
+        &__hamburger {
+          cursor: pointer;
+          content: '';
+          margin-top: 2px;
+          width: 20px;
+          height: 4px;
+          background-color: rgb(73, 73, 73);
+          border-radius: 50px;
+        }
+      }
+    }
+  }
+}
+
+.title {
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: center;
+  align-items: center;
+  background-color: $bg;
+  &__h {
+    font-size: 20px;
+    font-family: 'Kavoon', cursive;
+    letter-spacing: 2px;
+    text-shadow: 1px 1px 0 rgb(58, 58, 58);
+    margin-bottom: 20px;
+    &-name {
+      color: $redO;
+      letter-spacing: 5px !important;
+    }
+    &-coiffure {
+      color: $orange;
+      text-transform: uppercase;
+    }
+    &-mariage {
+      text-transform: uppercase;
+      color: $orange;
+    }
+  }
+  &__image {
+    padding: 20px 0 10px 0;
+    img {
+      width: 250px;
+      border-radius: 40% 78% 83% 28%/47% 56% 59% 68%;
+      // padding: 5px 0 5px 0;
+      box-shadow: 10px 10px 0px white, -10px -10px 0px white;
+      // border: 5px solid white;
+    }
+  }
+}
+.presentation {
+  &__text {
+    font-family: 'Fredoka One', cursive;
+    padding: 20px;
+    font-size: 25px;
+    color: $bgOther;
+  }
+}
+
+.container {
+  background-color: $bg;
+  &__card {
+    margin-bottom: 50px;
+  }
+}
+
+.footer {
+  background-color: $bgOther;
+  padding: 15px 0;
+  &__social {
+    display: flex;
+    margin: auto;
+    background-color: #fff;
+    border-radius: 25px;
+    width: max-content;
+    height: fit-content;
+    &-instagram {
+      padding: 10px;
+      cursor: pointer;
+      i {
+        color: #bc2a8d;
+        font-size: 35px;
+      }
+    }
+    &-facebook {
+      cursor: pointer;
+      padding: 10px;
+      i {
+        font-size: 35px;
+        color: #3b5998;
+      }
+    }
+  }
+  &__contact {
+    display: flex;
+    flex-direction: column;
+    &__title {
+      letter-spacing: 1px;
+      text-decoration: underline;
+    }
+    &__number {
+    }
+  }
+}

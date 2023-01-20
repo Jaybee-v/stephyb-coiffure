@@ -1,0 +1,94 @@
+body {
+  margin: 0;
+  height: 100vh;
+  background-color: #ccc;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100vh;
+}
+.container__card {
+  display: flex;
+}
+.container__card__wrapper-light {
+  border-radius: 20px;
+  width: 256px;
+  height: 320px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  perspective: 1000px;
+  transform: perspective(1000px) translateY(0);
+  transform-style: preserve-3d;
+  transition: transform 0.8s ease-in-out;
+  background-image: url(../assets/cascade_boucles.jpg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  color: rgba(39, 39, 39, 0.631372549);
+}
+.container__card__wrapper-light__text-overlay {
+  transform: perspective(1000px) translateY(0) translateZ(80px);
+  transition: transform 0.8s ease-in-out, opacity 1s ease;
+  pointer-events: none;
+  width: 100%;
+  perspective: inherit;
+  padding-top: 50px;
+}
+.container__card__wrapper-light__text-overlay h2 {
+  position: absolute;
+  top: 10px;
+  left: 30px;
+}
+.container__card__wrapper-light__button {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  left: 0;
+  top: 0;
+  transform: perspective(1000px) rotateY(179deg) translateY(0) translateZ(80px);
+  opacity: 0;
+  z-index: -1;
+  transition: transform 0.8s ease-in-out, opacity 1s ease;
+  width: 100%;
+  height: 100%;
+}
+.container__card__wrapper-light__button h2 {
+  color: #272727;
+  position: absolute;
+  top: -35px;
+  width: 100%;
+}
+.container__card__wrapper-light__button__link {
+  border: 1px solid orange;
+  border-radius: 30px;
+  background-color: rgba(255, 255, 255, 0.74);
+  padding: 10px;
+  cursor: pointer;
+  transition: 0.4s ease-in-out;
+}
+.container__card__wrapper-light__button__link:hover {
+  background-color: rgb(255, 255, 255);
+  border: 3px solid orange;
+  font-weight: 900;
+}
+
+.container__card__wrapper:hover .container__card__wrapper-light {
+  transform: rotateY(179deg);
+  z-index: 2;
+}
+
+.container__card__wrapper:hover .container__card__wrapper-light .container__card__wrapper-light__text-overlay {
+  opacity: 0;
+  transform-style: preserve-3d;
+  z-index: 1;
+}
+
+.container__card__wrapper:hover .container__card__wrapper-light .container__card__wrapper-light__button {
+  opacity: 1;
+}
+
+/*# sourceMappingURL=cards.css.map */
