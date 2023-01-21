@@ -30,9 +30,10 @@ ul {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  padding: 50px 0;
+  padding: 50px 0 0 0;
 }
 .container__card {
+  cursor: pointer;
   display: flex;
 }
 .container__card__wrapper-tech {
@@ -60,7 +61,7 @@ ul {
   font-size: 18px;
   letter-spacing: 2px;
   font-family: "Kavoon", cursive;
-  color: #f8bc9a;
+  color: #fe8c8c;
   text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.699), -1px -1px 0 rgba(0, 0, 0, 0.699);
   position: absolute;
   top: 10px;
@@ -119,6 +120,14 @@ ul {
   opacity: 1;
 }
 
+@media screen and (min-width: 650px) {
+  .container {
+    flex-direction: row;
+  }
+  .container__card {
+    padding: 0 100px;
+  }
+}
 .header {
   background-color: #f8d49a;
 }
@@ -230,10 +239,42 @@ ul {
 .footer__contact {
   display: flex;
   flex-direction: column;
+  padding: 0 20px;
 }
 .footer__contact__title {
   letter-spacing: 1px;
   text-decoration: underline;
+}
+.footer__contact__number {
+  font-size: 20px;
+  font-weight: 600;
+  margin: auto;
+}
+
+@media screen and (min-width: 650px) {
+  .header__navbar__logo {
+    margin-left: 450px;
+  }
+  .title {
+    flex-direction: row;
+  }
+  .title__h {
+    padding: 0 105px 0 0;
+    font-size: 2rem;
+    line-height: 70px;
+  }
+  .title__image img {
+    width: 350px;
+  }
+  .presentation {
+    max-width: 950px;
+    width: 100%;
+    margin: auto;
+    text-align: center;
+  }
+  .footer__contact__title {
+    margin-left: 650px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

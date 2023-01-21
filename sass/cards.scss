@@ -6,8 +6,9 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  padding: 50px 0;
+  padding: 50px 0 0 0;
   &__card {
+    cursor: pointer;
     display: flex;
     &__wrapper {
       &-tech {
@@ -28,7 +29,7 @@
             font-size: 18px;
             letter-spacing: 2px;
             font-family: 'Kavoon', cursive;
-            color: $orange;
+            color: $redO;
             text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.699),
               -1px -1px 0 rgba(0, 0, 0, 0.699);
             position: absolute;
@@ -102,4 +103,13 @@
   .container__card__wrapper-tech
   .container__card__wrapper-tech__button {
   opacity: 1;
+}
+
+@media screen and (min-width: 650px) {
+  .container {
+    flex-direction: row;
+    &__card {
+      padding: 0 100px;
+    }
+  }
 }

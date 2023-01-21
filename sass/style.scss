@@ -119,11 +119,52 @@
   &__contact {
     display: flex;
     flex-direction: column;
+    padding: 0 20px;
     &__title {
       letter-spacing: 1px;
       text-decoration: underline;
     }
     &__number {
+      font-size: 20px;
+      font-weight: 600;
+      margin: auto;
+    }
+  }
+}
+
+@media screen and (min-width: 650px) {
+  .header {
+    &__navbar {
+      &__logo {
+        margin-left: 450px;
+      }
+    }
+  }
+  .title {
+    flex-direction: row;
+    &__h {
+      padding: 0 105px 0 0;
+      font-size: 2rem;
+      line-height: 70px;
+    }
+    &__image {
+      img {
+        width: 350px;
+      }
+    }
+  }
+  .presentation {
+    max-width: 950px;
+    width: 100%;
+    margin: auto;
+    text-align: center;
+  }
+
+  .footer {
+    &__contact {
+      &__title {
+        margin-left: 650px;
+      }
     }
   }
 }
